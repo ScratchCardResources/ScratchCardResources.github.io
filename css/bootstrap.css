@@ -2631,6 +2631,7 @@ input[type="search"] {
   }
 }
 .form-group {
+  margin-top:4.5px;
   margin-bottom: 15px;
 }
 .radio,
@@ -3055,7 +3056,16 @@ fieldset[disabled] .btn {
           box-shadow: none;
   opacity: .65;
 }
+.btn.labeling,
+.btn[labeling],
+fieldset[labeling] .btn {
+  filter: alpha(opacity=65);
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  opacity: .65;
+}
 a.btn.disabled,
+a.btn.labeling,
 fieldset[disabled] a.btn {
   pointer-events: none;
 }
@@ -3108,9 +3118,20 @@ fieldset[disabled] .btn-default:hover,
 fieldset[disabled] .btn-default:focus,
 .btn-default.disabled.focus,
 .btn-default[disabled].focus,
-fieldset[disabled] .btn-default.focus {
+fieldset[disabled] .btn-default.focus,
+.btn-default.labeling:hover,
+.btn-default[labeling]:hover,
+fieldset[labeling] .btn-default:hover,
+.btn-default.labeling:focus,
+.btn-default[labeling]:focus,
+fieldset[labeling] .btn-default:focus,
+.btn-default.labeling.focus,
+.btn-default[labeling].focus,
+fieldset[labeling] .btn-default.focus
+ {
   background-color: #fff;
   border-color: #ccc;
+  cursor: inherit;
 }
 .btn-default .badge {
   color: #fff;
@@ -3452,7 +3473,7 @@ fieldset[disabled] .btn-link:focus {
 .btn-group-xs > .btn {
   padding: 1px 5px;
   font-size: 12px;
-  line-height: 1.5;
+  line-height: 1.75;
   border-radius: 3px;
 }
 .btn-block {
@@ -3645,11 +3666,15 @@ tbody.collapse.in {
     left: 0;
   }
 }
+#___ytsubscribe_0{
+	vertical-align:bottom;
+}
+
 .btn-group,
 .btn-group-vertical {
   position: relative;
   display: inline-block;
-  vertical-align: middle;
+  vertical-align: top;
 }
 .btn-group > .btn,
 .btn-group-vertical > .btn {
@@ -3699,6 +3724,7 @@ tbody.collapse.in {
 .btn-group > .dropdown-toggle:not(:first-child) {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
+  margin-right:12px;
 }
 .btn-group > .btn-group {
   float: left;
@@ -4469,8 +4495,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   margin-bottom: 10px;
 }
 .navbar-btn.btn-xs {
-  margin-top: 14px;
-  margin-bottom: 14px;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 .navbar-text {
   margin-top: 15px;
